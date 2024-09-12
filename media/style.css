@@ -1,0 +1,89 @@
+.code {
+    white-space: pre;
+}
+
+p {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+/* overrides vscodes style reset, displays as if inside web browser */
+ul, ol {
+    list-style: initial !important;
+    margin-left: 10px !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold !important;
+}
+
+.suggestion-list {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 20px;
+    font-size: 0.9rem;
+    overflow: hidden auto;
+    max-height: 330px;
+    width: calc(30% - 24px);
+    padding: 0.2rem;
+    position: absolute;
+    background-color: var(--vscode-quickInput-background,--vscode-input-background,rgb(45 45 45));
+    top: -1rem;
+    left: .5rem;
+}
+
+.suggestion-list .tag {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.4rem;
+    display: block;
+    margin: 0px;
+    padding: 0.2rem 0.4rem;
+    text-align: left;
+    color: var(--vscode-editor-foreground, #fff);
+    cursor: pointer;
+}
+
+.suggestion-list .tag:hover {
+    background-color: #005A9E !important;
+}
+
+.prompt-input {
+    word-wrap: break-word;
+    white-space: break-spaces;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+    position: relative;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    overflow: hidden;
+    margin-top: -.25rem;
+}
+
+.prompt-wrapper {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: var(--vscode-input-background,rgb(45 45 45));
+    padding-left: .5rem;
+    padding-right: .5rem;
+    resize: none;
+    border-radius: 5px;
+    margin: 0px;
+    height: auto;
+    width: calc(100% - 24px);
+    color: var(--vscode-editor-foreground,#fff);
+    z-index: 1;
+    border: 0.5px solid var(--vscode-input-border,#999998);
+    outline: none;
+    font-size: 14px;
+}
+
+.temp {
+    position: relative;
+}
+
+.tag {
+    background-color: var(--vscode-badge-background, #bfe2b6);
+    color: var(--vscode-badge-foreground, --vscode-foreground, #000);
+    border-radius: 3px;
+    font-size: .9rem;
+    padding: .05em .15em;
+    transition: background-color .2s ease-in-out;
+}
